@@ -36,9 +36,7 @@ module.exports = reverseString; **/
 module.exports = reverseString; */
 
 const reverseString = (str) => {
-    const arr = str.split('');
-    const reversedArr = arr.reverse();
-    return reversedArr.join('');
+    return arr = str.split('').reverse().join('');
     
 };       
 
