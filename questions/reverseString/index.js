@@ -35,10 +35,17 @@ module.exports = reverseString; **/
 
 module.exports = reverseString; */
 
-const reverseString = (str) => {
+/** 
+ * const reverseString = (str) => {
     return arr = str.split('').reverse().join('');
     
 };       
+
+module.exports = reverseString; */
+
+const reverseString = (str) => {
+
+}       
 
 module.exports = reverseString;
 
