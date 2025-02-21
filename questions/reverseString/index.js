@@ -13,10 +13,20 @@
 // a = 'vaD', c = 'i' => a = 'i' + 'vaD' = 'ivaD'
 // a = 'ivaD', c = 'd' => a = 'd' + 'ivaD' = 'divaD'
 
-const reverseString = (str) => {
+/**const reverseString = (str) => {
     let reversedString = '';
     for (let i = 0; i < str.length; ++i) {
         reversedString = str[i] + reversedString;
+    }
+    return reversedString;
+};
+
+module.exports = reverseString; **/
+
+const reverseString = (str) => {
+    let reversedString = '';
+    for (let char of str) {
+        reversedString = char + reversedString;
     }
     return reversedString;
 };
