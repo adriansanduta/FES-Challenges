@@ -44,8 +44,8 @@ module.exports = reverseString; */
 module.exports = reverseString; */
 
 const reverseString = (str) => {
-  
-}       
+    return str.split('').reduce((accumulator, currentValue) => currentValue + accumulator, '');
+};    
 
 module.exports = reverseString;
 
