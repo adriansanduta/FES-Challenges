@@ -19,13 +19,22 @@
 const stringifyId = (arr) => {
    const idArray = arr.map(odj => odj.id);
    const uniqueArray = [];
+   let idString = "";
 
    for (let id of idArray) {
        if (!uniqueArray.includes(id)) {
            uniqueArray.push(id);
        }
    }
-   return uniqueArray.join(", ");
+
+   for (let i = 0; i < uniqueArray.length; i++) {
+       if (i !== uniqueArray.length - 1 ) {
+           idString += `${uniqueArray[i]}, `
+       }
+       else {
+           idString += uniqueArray[i];}
+   }
+   return idString;
 };
 
 module.exports = stringifyId;
