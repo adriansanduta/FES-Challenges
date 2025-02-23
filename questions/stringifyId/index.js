@@ -16,7 +16,7 @@
  * ]) === 'ABC, abc, CBA'
  */
 
-const stringifyId = (arr) => {
+/** const stringifyId = (arr) => {
    const idArray = arr.map(odj => odj.id);
    const uniqueArray = [];
    let idString = "";
@@ -37,4 +37,23 @@ const stringifyId = (arr) => {
    return idString;
 };
 
-module.exports = stringifyId;
+module.exports = stringifyId; */
+
+const stringifyId = (arr) => {
+    const idArray = arr.map(odj => odj.id);
+    const uniqueArray = [];
+    let idString = "";
+ 
+    for (let id of idArray) {
+        if (!uniqueArray.includes(id)) {
+            uniqueArray.push(id);
+        }
+    }
+ 
+    for (let i = 0; i < uniqueArray.length; i++)  {
+            idString += `${uniqueArray[i]}, `;
+        }
+    return idString.slice(0, idString.length - 2);
+ };
+ 
+ module.exports = stringifyId;
