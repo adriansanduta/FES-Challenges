@@ -58,10 +58,9 @@ module.exports = stringifyId; */
  
  module.exports = stringifyId; */
 
- const stringifyId = (arr) => {
+ /* const stringifyId = (arr) => {
     const idArray = arr.map(odj => odj.id);
     const uniqueArray = [];
-    let idString = "";
  
     for (let id of idArray) {
         if (!uniqueArray.includes(id)) {
@@ -69,6 +68,14 @@ module.exports = stringifyId; */
         }
     }
  
+    return uniqueArray.join(', ');
+ };
+ 
+ module.exports = stringifyId; */
+
+ const stringifyId = (arr) => {
+    const idArray = arr.map(odj => odj.id);
+    const uniqueArray = [...new Set(idArray)];
     return uniqueArray.join(', ');
  };
  
