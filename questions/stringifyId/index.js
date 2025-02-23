@@ -17,7 +17,15 @@
  */
 
 const stringifyId = (arr) => {
+   const idArray = arr.map(odj => odj.id);
+   const uniqueArray = [];
 
+   for (let id of idArray) {
+       if (!uniqueArray.includes(id)) {
+           uniqueArray.push(id);
+       }
+   }
+   return uniqueArray.join(", ");
 };
 
 module.exports = stringifyId;
