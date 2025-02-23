@@ -39,7 +39,7 @@
 
 module.exports = stringifyId; */
 
-const stringifyId = (arr) => {
+/* const stringifyId = (arr) => {
     const idArray = arr.map(odj => odj.id);
     const uniqueArray = [];
     let idString = "";
@@ -54,6 +54,22 @@ const stringifyId = (arr) => {
             idString += `${uniqueArray[i]}, `;
         }
     return idString.slice(0, idString.length - 2);
+ };
+ 
+ module.exports = stringifyId; */
+
+ const stringifyId = (arr) => {
+    const idArray = arr.map(odj => odj.id);
+    const uniqueArray = [];
+    let idString = "";
+ 
+    for (let id of idArray) {
+        if (!uniqueArray.includes(id)) {
+            uniqueArray.push(id);
+        }
+    }
+ 
+    return uniqueArray.join(', ');
  };
  
  module.exports = stringifyId;
