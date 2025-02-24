@@ -13,7 +13,16 @@ const anagrams = (strA, strB) => {
   const charMapA = buildCharMap(strA);
   const charMapB = buildCharMap(strB);
 
-    return [charMapA, charMapB];
+  if (charMapA.size !== charMapB.size) {
+    return false;
+  }
+
+  for (const [charA, countA] of charMapA) {
+    if (charMapB.get(charA) !== countA) {
+      return false;
+    }
+  }
+    return true;
 };
 
 const buildCharMap = (str) => {
