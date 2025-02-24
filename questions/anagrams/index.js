@@ -40,9 +40,11 @@ const removeSpacesAndLowerCase = (str) => {
 module.exports = anagrams; */
 
 const anagrams = (strA, strB) => {
-   const cleanedA = strA.toLowerCase().replaceAll(" ","").split('').sort().join('') 
-   const cleanedB = strB.toLowerCase().replaceAll(" ","").split('').sort().join('')
-    return cleanedA === cleanedB
+   return cleanString(strA) === cleanString(strB);
 };
+
+const cleanString = (str) => {  
+    return str.toLowerCase().replaceAll(" ","").split('').sort().join('')
+}
   
   module.exports = anagrams;
