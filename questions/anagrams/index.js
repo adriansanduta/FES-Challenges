@@ -10,7 +10,15 @@
  */
 
 const anagrams = (strA, strB) => {
-  
+  const charMapA = new Map();
+  const charMapB = new Map();
+
+  for (const char of strA) {
+    charMapA.set(char, charMapA.get(char) + 1 || 1);
+     }
+  for (const char of strB) {
+        charMapB.set(char, charMapB.get(char) + 1 || 1);
+    }   
 }
 
 module.exports = anagrams;
