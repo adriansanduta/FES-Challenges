@@ -10,19 +10,22 @@
  */
 
 const anagrams = (strA, strB) => {
-  const charMapA = new Map();
-  const charMapB = new Map();
+  const charMapA = buildCharMap(strA);
+  const charMapB = buildCharMap(strB);
 
-  for (const char of strA.toLowerCase().replaceAll(" ", "")) {
-    charMapA.set(char, charMapA.get(char) + 1 || 1);
-     }
-  for (const char of strB.toLowerCase().replaceAll(" ", "")) {
-        charMapB.set(char, charMapB.get(char) + 1 || 1);
-    } 
-    
     return [charMapA, charMapB];
 };
 
+const buildCharMap = (str) => {
+  const charMap = new Map();
+  for (const char of removeSpacesAndLowerCase(str)) {
+    charMap.set(char, charMap.get(char) + 1 || 1);
+  }
+  return charMap;
+}
 
+const removeSpacesAndLowerCase = (str) => {
+  return str.toLowerCase().replaceAll(" ", "");
+};
 
 module.exports = anagrams;
