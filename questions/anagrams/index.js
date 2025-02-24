@@ -9,7 +9,7 @@
  * anagrams('frontend', 'simplified') === false
  */
 
-const anagrams = (strA, strB) => {
+/* const anagrams = (strA, strB) => {
   const charMapA = buildCharMap(strA);
   const charMapB = buildCharMap(strB);
 
@@ -37,4 +37,12 @@ const removeSpacesAndLowerCase = (str) => {
   return str.toLowerCase().replaceAll(" ", "");
 };
 
-module.exports = anagrams;
+module.exports = anagrams; */
+
+const anagrams = (strA, strB) => {
+   const cleanedA = strA.toLowerCase().replaceAll(" ","").split('').sort().join('') 
+   const cleanedB = strB.toLowerCase().replaceAll(" ","").split('').sort().join('')
+    return cleanedA === cleanedB
+};
+  
+  module.exports = anagrams;
