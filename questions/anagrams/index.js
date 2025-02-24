@@ -13,12 +13,16 @@ const anagrams = (strA, strB) => {
   const charMapA = new Map();
   const charMapB = new Map();
 
-  for (const char of strA) {
+  for (const char of strA.toLowerCase().replaceAll(" ", "")) {
     charMapA.set(char, charMapA.get(char) + 1 || 1);
      }
-  for (const char of strB) {
+  for (const char of strB.toLowerCase().replaceAll(" ", "")) {
         charMapB.set(char, charMapB.get(char) + 1 || 1);
-    }   
-}
+    } 
+    
+    return [charMapA, charMapB];
+};
+
+
 
 module.exports = anagrams;
