@@ -17,8 +17,11 @@ const arrayChunk = (array, size) => {
 // Create a subarray of length 'size' that slices from the current index
     array.slice(i, i + size);
 // Push the subarray into 'chunkedArray'
-
+    chunkedArray.push(subarray);
   }
+
+  // Return 'chunkedArray'
+  return chunkedArray;
 };
 
 module.exports = arrayChunk;
