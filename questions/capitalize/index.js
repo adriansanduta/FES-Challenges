@@ -26,7 +26,10 @@ const capitalize = (str) => {
       result += str[i].toUpperCase();
     } 
     else {
+        result += str[i];
   }
+}
+  return result;
 };
 
 module.exports = capitalize;
