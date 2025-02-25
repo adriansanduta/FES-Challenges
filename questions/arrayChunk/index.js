@@ -13,9 +13,9 @@ const arrayChunk = (array, size) => {
 
 
 // For each index in the array that is divisible by 'size'
-  for (let i = 0; i < array,this.length; i += size) {
+  for (let i = 0; i < array.length; i += size) {
 // Create a subarray of length 'size' that slices from the current index
-    array.slice(i, i + size);
+    const subarray = array.slice(i, i + size);
 // Push the subarray into 'chunkedArray'
     chunkedArray.push(subarray);
   }
