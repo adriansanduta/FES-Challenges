@@ -9,11 +9,11 @@
 
 const capitalize = (str) => {
     const result = [];
-    for (let char of str.split("")) {
+    for (let word of str.split("")) {
         const capitalizedWord = word[0].toUpperCase() + word.slice(1);
-        return capitalizedWord;
+        result.push(capitalizedWord);
     }
-  return str.split(" ")
+  return result;
 };
 
 module.exports = capitalize;
