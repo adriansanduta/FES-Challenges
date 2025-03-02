@@ -18,7 +18,10 @@
  */
 
 const steps = (n) => {
-
+   for (let row = 0; row < n; row++) {
+    let step = "";
+    
+   }
 };
 
 module.exports = steps;
