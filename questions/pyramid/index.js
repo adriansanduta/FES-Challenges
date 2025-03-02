@@ -27,7 +27,9 @@ const pyramid = (n) => {
         if (column >= middle - row && column <= middle + row) {
             step += "#";
         }
-        step += "#";
+        else {
+            step += " ";
+        }
     } 
     console.log(step)
   }
